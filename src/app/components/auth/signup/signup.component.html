@@ -1,0 +1,63 @@
+
+<!--<div class="signup signin">
+  <div class="form-inline firstname">
+    <input type="text"
+    placeholder="your name..." name="firstName"
+    [(ngModel)] ="firstName"
+    />
+    <input type="hidden"
+    [(ngModel)] = "isUpdate"
+    />
+    <button (click)="addUser()">Save</button>
+  </div>
+
+  <div class="names">
+    <ul>
+      <li class="flex aic" [(ngModel)] = "users" *ngFor="let user of users; let index = index">{{user}}
+        <div class="btn-action flex gap-10">
+          <button type="button"
+          (click)="deleteUser(index)">Delete</button>
+          <button type="button"
+          (click)="updateUser(index)">Update</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<!--<form class="form-signup" action="">
+  <legend>Inscription</legend>
+  <div class="names_values">
+    <input name="_firstName" type="text"/>
+    <input name="_lastName" type="text"/>
+  </div>
+  <input name="_email" type="email"/>
+  <input name="_firstPassWord" type="password"/>
+  <input name="_secondPassword" type="password"/>
+  <button name="_signupAction" type="button">S'inscrire</button>
+</form>-->
+
+<div class="signup-valid">
+  <div class="form-container">
+    <form action="">
+      <h2>Inscription</h2>
+      <div class="form-line flex gap-10 wrap">
+        <input [(ngModel)] = "user.firstName" class="flex-1" name="_firstName" type="text" placeholder="Your firstname ..."/>
+        <input [(ngModel)] = "user.lastName"  class="flex-1" name="_lastName" type="text" placeholder="Your last name ..."/>
+      </div>
+      <div class="form-line flex">
+        <input [(ngModel)] = "user.email"  class="flex-1" name="_email" type="email" placeholder="Your email please ..."/>
+      </div>
+      <div class="form-line flex">
+        <input [(ngModel)] = "user.password"  class="flex-1"  name="_password" type="password" placeholder="Your password please ..."/>
+      </div>
+      <div class="form-line flex">
+        <input [(ngModel)] = "user.passwordConfirm"  class="flex-1" name="_passwordConfirm" type="password" placeholder="Confirm your password please ..."/>
+      </div>
+      <div  class="button flex">
+        <button type="button" class="btn flex-1" (click)="handleSubmit()"> S'inscrire </button>
+      </div>
+    </form>
+  </div>
+</div>
+

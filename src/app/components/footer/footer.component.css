@@ -1,0 +1,18 @@
+footer{
+
+}
+.footer-content{
+  height: calc(100vh - 70vh - 80px);
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.footer-bottom{
+  height: 30px;
+  background-color: rgb(62, 18, 2);
+}

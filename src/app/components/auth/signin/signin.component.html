@@ -1,0 +1,32 @@
+<div class="signup-valid">
+  <div class="form-container">
+    <form action="" [formGroup]="signInForm">
+      <h2>Connexion</h2>
+      <div class="form-line flex">
+        <input class="flex-1" [formControl]="email" name="_email" type="email" placeholder="Your email please ..."/>
+      </div>
+      <div class="error" *ngIf="email.dirty && !email.valid">
+        <p *ngIf="email.hasError('required')">
+        L'email est requis !
+        </p>
+        <p *ngIf="!email.hasError('required')">
+          Le format de l'email est invalide
+        </p>
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" [formControl]="password" name="_password" type="password" placeholder="Your password please ..."/>
+      </div>
+      <div class="error" *ngIf="password.dirty && !password.valid">
+        <p *ngIf="password.hasError('minlength')">
+        Le mot de passe doit avoir minimum 8 caractères.
+        </p>
+        <p *ngIf="password.hasError('required')">
+          Le format de l'email est invalide
+        </p>
+      </div>
+      <div  class="button flex">
+        <button type="button" class="btn flex-1" [disabled]="!this.signInForm.valid" (click)="handleSubmit()"> Se connecter </button>
+      </div>
+    </form>
+  </div>
+</div>
